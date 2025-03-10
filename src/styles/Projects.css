@@ -1,0 +1,99 @@
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    text-align: left;
+    background-color: #001f3f;
+    color: rgb(220, 220, 244) ;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: auto; /* Remove full height */
+    padding: 50px 0; /* Reduce vertical spacing */
+    margin: 0 auto; /* Prevent extra margins */
+    max-width: 1200px; /* Keeps content centered */
+  }
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: rgb(220, 220, 244);
+}
+
+/* Grid Layout: 3 Cards Per Row */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #001f3f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header: Folder on Left, GitHub on Right */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Folder Icon */
+.folder-icon {
+  font-size: 30px;
+  color: aquamarine;
+}
+
+/* GitHub Icon */
+.github-icon {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.github-icon:hover {
+  color: aquamarine;
+}
+
+/* Project Title */
+.project-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(220, 220, 244);
+  margin-bottom: 8px;
+}
+
+/* Project Descriptions */
+.project-description {
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(132, 132, 163);
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}

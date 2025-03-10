@@ -1,0 +1,90 @@
+/* About Section */
+#about {
+    background-color: #001f3f;
+    color: rgb(220, 220, 244);
+    text-align: left;
+    min-height: auto; /* Remove full height */
+    padding: 50px 0; /* Reduce vertical spacing */
+    margin: 0 auto; /* Prevent extra margins */
+    max-width: 1200px; /* Keeps content centered */
+    background-color: #001f3f;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+  }
+  
+  #about h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+/* Container for text & image */
+.about-content {
+  color: rgb(132, 132, 163);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns image to the right */
+  gap: 1px; /* Keeps spacing balanced */
+  width: 100%;
+}
+
+/* Left Side: Text */
+.about-text-container {
+  flex: 1;
+  max-width: 100%; /* Allows text to take full width */
+  font-size: 16px; /* Bigger text */
+  line-height: 1.8; /* Improves readability */
+}
+
+/* Right Side: Image */
+.about-image-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns image to the right */
+  flex-shrink: 0; /* Prevents image from shrinking */
+  margin-right: 20px; /* Adds space between text & image */
+}
+
+.about-image {
+  width: 80%; /* Reduce image size */
+  max-width: 325px; /* Smaller image */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+.skills-list {
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Ensures skills wrap on small screens */
+  gap: 10px; /* Adds spacing between skills */
+}
+
+.skills-list li {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+  color: aquamarine;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack text & image on mobile */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text-container {
+    max-width: 100%;
+  }
+
+  .about-image {
+    display: none; /* Hide image on small screens */
+  }
+}
+
+  
