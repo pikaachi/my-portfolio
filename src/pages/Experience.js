@@ -3,9 +3,10 @@ import "../styles/Experience.css";
 
 const Experience = () => {
   const [experiences, setExperiences] = useState([]);
-
+  const API_URL = process.env.REACT_APP_API_URL;
+  console.log("Fetching experience from:", API_URL); // Debugging log
   useEffect(() => {
-    fetch("http://localhost:1337/api/experience?populate=*")
+    fetch(`${API_URL}/experience?populate=*`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched Experience:", JSON.stringify(data, null, 2)); // Debugging log
