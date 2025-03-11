@@ -6,7 +6,7 @@
     text-align: left;
     min-height: auto; /* Remove full height */
     padding: 50px 0; /* Reduce vertical spacing */
-    margin: 0 auto; /* Prevent extra margins */
+    margin: 0 ; /* Prevent extra margins */
     max-width: 1200px; /* Keeps content centered */
     font-family: 'Courier New', Courier, monospace;
     

@@ -59,7 +59,7 @@
 /* Effect Container - Limits height above hero content */
 .hero-effect-container {
   position: absolute;
-  top: 175px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
