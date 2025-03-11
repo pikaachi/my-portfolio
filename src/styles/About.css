@@ -74,8 +74,8 @@
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column; /* Stack text & image on mobile */
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
   }
 
   .about-text-container {
