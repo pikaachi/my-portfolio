@@ -1,11 +1,10 @@
-import path from "path";
-
 export default ({ env }) => ({
   connection: {
-    client: "sqlite",
+    client: "postgres",
     connection: {
-      filename: path.join(__dirname, "..", "..", ".tmp/data.db"),
+      connectionString: env("DATABASE_URL"),
+      ssl: { rejectUnauthorized: false },
     },
-    useNullAsDefault: true,
+    pool: { min: 2, max: 10 },
   },
 });
