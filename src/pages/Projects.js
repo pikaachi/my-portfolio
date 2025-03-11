@@ -4,9 +4,10 @@ import { FaFolder, FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const API_URL = "http://localhost:1337";
-  useEffect(() => {
-    fetch("http://localhost:1337/api/projects?populate=*")
+  const API_URL = process.env.REACT_APP_API_URL;
+    console.log("Fetching projects from:", API_URL); // Debugging log
+    useEffect(() => {
+      fetch(`${API_URL}/projects?populate=*`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched Projects:", JSON.stringify(data, null, 2)); // Debugging log
