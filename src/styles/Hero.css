@@ -1,14 +1,16 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh; /* Reduced from 100vh to 80vh */
-  text-align: top; /* Align text to the bottom */
-  background-color: #001f3f;
+  position: relative;           /* So we can control positioning if needed */
+  display: flex;               /* Use Flexbox */
+  flex-direction: column;      /* Stack items vertically */
+  justify-content: center;     /* Center items vertically */
+  align-items: center;         /* Center items horizontally */
+  min-height: 100vh;           /* Fill the screen vertically */
+  text-align: center;          /* Center text horizontally */
+  background-color: #001f3f;   /* Example background color */
   color: rgb(220, 220, 244);
   font-family: 'Courier New', Courier, monospace;
-  padding: 50px 0; /* Reduce padding to bring sections closer */
+  padding: 0 20px;             /* Add horizontal padding so text isn't clipped */
+  box-sizing: border-box;       /* Ensure padding doesn't break layout */
 
 }
 
@@ -63,16 +65,16 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 200px; /* Matches the effect's height */
+  height: 200px;
   z-index: 1;
 }
 
 .hero-content {
-  font-weight: bold;
-  color: rgb(132, 132, 163);
-  max-width: 50%;
-  z-index: 2; /* Places the content in the foreground */
-  padding-top: 300px;
+  max-width: 600px;     /* Keeps content from being too wide */
+  width: 100%;          /* Ensures it scales on small screens */
+  margin: 0 auto;       /* Center horizontally if there's extra space */
+  box-sizing: border-box;
+  margin-top: 200px;
 }
 
 .email-icon {
@@ -82,6 +84,9 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    align-items: center; /* Align content to the center */
+  }
   .hero h1 {
     font-size: 36px; /* Adjust font size for smaller screens */
   }
