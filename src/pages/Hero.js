@@ -13,7 +13,7 @@ const Hero = () => {
       <div className='hero-content'>
         <h1>hi,  <span className="pika-name">pika</span> here.</h1>
         <h2>I create stuff sometimes</h2>
-        <p>I'm a software engineer from Austin, TX. I'm facinated by big data systems and 
+        <p>I'm a software engineer from Austin, TX. I'm facinated by Machine Learning (like all SE these days!) and 
           I love to create interactive web applications. I'm currently looking for new opportunities.
         </p>
         <a href="mailto:20dipikagiri21@gmail.com" className="hero-button">
