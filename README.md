@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio website built to showcase my experience, projects, and interests as a software engineer. The site is designed to be fast, responsive, and data-driven, with content managed through a headless CMS and deployed using a modern CI/CD workflow.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tech Stack Overview
 
-### `npm start`
+### Frontend
+- **React (Create React App)**  
+  Used to build a component-based, responsive user interface with clear separation of concerns.
+- **JavaScript (ES6+)**  
+  Handles application logic, API calls, and data rendering.
+- **CSS3**  
+  Custom CSS for layout, animations, and styling (Hero effects, timeline, custom bullet indicators).
+- **React Icons**  
+  Used for lightweight, scalable icons (GitHub, email, folders).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend / Content Management
+- **Strapi (Headless CMS)**  
+  Used to manage and update portfolio content such as:
+  - Experience entries
+  - Project listings  
+  Strapi allows content to be updated without redeploying the frontend.
+- **REST API**  
+  The frontend fetches structured content from Strapi using REST endpoints with `populate=*` for relational data.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Data Handling
+- **Environment Variables (`REACT_APP_API_URL`)**  
+  Used to configure API endpoints across local and production environments.
+- **Local Mock Data (Development Fallback)**  
+  Enables local UI testing when the backend or API is unavailable.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Analytics
+- **Google Analytics**  
+  Integrated to track real-time active users and basic engagement metrics, helping validate traffic and usage behavior.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Google Analytics Active Visits](public/google_analytics_report.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Deployment & Infrastructure
+- **Vercel**  
+  Used for hosting and deployment of the production build.
+  - Automatic builds on GitHub commits
+  - Optimized static asset delivery
+  - Environment variable management
+- **Production Builds (`react-scripts build`)**  
+  Ensures optimized, minified assets for performance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development & Tooling
+- **Node.js / npm**  
+  Dependency management and build tooling.
+- **ESLint**  
+  Enforces code quality and React Hooks best practices.
+- **Git & GitHub**  
+  Version control and source code management.
+- **Serve (local production testing)**  
+  Used to locally test production builds (`serve -s build`) to match deployed behavior.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Key Features
+- Responsive hero section with animated visual effects
+- Timeline-based experience section with custom bullet styling
+- Project cards dynamically rendered from CMS data
+- CMS-driven content updates without frontend redeploy
+- Analytics integration for real-time monitoring
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Environment Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a `.env.local` file for local development:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```env
+REACT_APP_API_URL=http://localhost:1337/api
