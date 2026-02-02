@@ -40,6 +40,7 @@ const Experience = () => {
             const descriptionText = descriptionArray
               .map((desc) => desc?.children?.map((child) => child.text).join(" "))
               .join("\n")
+              .split("\n")
               .trim();
 
             return (
@@ -51,7 +52,15 @@ const Experience = () => {
                   <p className="duration">
                     {startYear} - {endYear}
                   </p>
-                  <p className="description">{descriptionText || "No description available."}</p>
+                  {descriptionText.length > 0 ? (
+                    <ul className= "description">
+                      {descriptionText.map((line, idx) => (
+                        <li key={idx}>{line}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                  <p className="description">No description available.</p>
+                  )}
                 </div>
               </div>
             );
