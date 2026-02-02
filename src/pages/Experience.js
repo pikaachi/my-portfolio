@@ -14,17 +14,6 @@ const MOCK_EXPERIENCES = [
       "Improved data reliability by resolving duplicate records and timestamp edge cases\n" +
       "Built KPI views and dashboards for operational visibility",
   },
-  {
-    id: "mock-2",
-    company: "Samsung Austin Semiconductor",
-    title: "Systems / Data Engineer",
-    start_date: "2024-02-01",
-    end_date: null,
-    description_text:
-      "Partnered with cross-functional teams to standardize process documentation\n" +
-      "Automated reporting and data checks to improve traceability\n" +
-      "Supported production issue triage with SQL-based analysis",
-  },
 ];
 
 const API_URL = process.env.REACT_APP_API_URL;
