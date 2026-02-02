@@ -87,6 +87,10 @@
   .hero {
     align-items: center; /* Align content to the center */
   }
+  .hero-effect-container {
+    top: 50px; /* Adjust position for smaller screens */
+    height: 150px; /* Adjust height for smaller screens */
+  }
   .hero h1 {
     font-size: 36px; /* Adjust font size for smaller screens */
   }
