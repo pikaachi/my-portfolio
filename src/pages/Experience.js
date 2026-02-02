@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Experience.css";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Experience = () => {
   const [experiences, setExperiences] = useState([]);
-  const API_URL = process.env.REACT_APP_API_URL;
   console.log("Fetching experience from:", API_URL); // Debugging log
   useEffect(() => {
+    //fetch(`http://localhost:1337/api/experience?populate=*`)
     fetch(`${API_URL}/experience?populate=*`)
       .then((res) => res.json())
       .then((data) => {
