@@ -8,17 +8,18 @@ const About = () => {
       <h2>/ about me</h2>
       <div className="about-content">
         <div className="about-text-container">
-          <p>I am a software engineer specializing in React and Node.js.</p>
-          <p>I have a passion for creating interactive web applications that provide value to users.</p>
+          <p>I am a software engineer specializing in Web applications.</p>
+          <p>I have a passion for turning business problems into scalable software solutions.</p>
           <p>Here are some technologies I have been working with:</p>
           {/* Skills List */}
           <ul className="skills-list">
-            <li>React.js</li>
+            <li>ASP.NET Core</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>React</li>
             <li>Node.js</li>
-            <li>JavaScript (ES6+)</li>
-            <li>HTML & CSS</li>
-            <li>MongoDB & PostgreSQL</li>
-            <li>REST APIs & GraphQL</li>
+            <li>Oracle & PostgreSQL</li>
+            <li>REST APIs</li>
             <li>Git & GitHub</li>
           </ul>
 
